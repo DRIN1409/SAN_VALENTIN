@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Es broma verdad?</title>
+    <style>
+        /* Estilo divertido de enfado */
+        body {
+            background-color: #ff4d88;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            background-image: url('https://www.pngall.com/wp-content/uploads/5/Valentines-Day-Love-Background-Free-PNG.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            background: rgba(255, 0, 102, 0.8); /* Fondo semi-transparente */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: red;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+            text-transform: uppercase;
+            animation: gritar 1s ease-in-out;
+        }
+
+        /* Animación para el gritar */
+        @keyframes gritar {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            width: 250px; 
+            height: auto;
+            border-radius: 10px;
+            border: 4px solid #ff4d88;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button {
+            font-size: 1.5rem;
+            padding: 15px 30px;
+            background-color: #ff4d88;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #ff3385;
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>¡¿Estás segura?!</h1>
+        <img src="images/no.gif" alt="GIF Divertido">
+        <div class="button-container">
+            <button onclick="volver()">Segunda Oportunidad</button>
+        </div>
+    </div>
+
+    <script>
+        function volver() {
+            // Guardar en localStorage que el botón "Sí" debe ser grande
+            localStorage.setItem("siButtonBig", "true");
+            window.location.href = "principal.html"; 
+        }
+    </script>
+
+</body>
+</html>
